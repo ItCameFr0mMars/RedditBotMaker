@@ -1,4 +1,5 @@
 from os.path import dirname
+from numpy import intp
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
@@ -49,26 +50,29 @@ email = driver.find_element_by_class_name("mailtext").get_attribute("value")
 print(email)
 driver.switch_to.window(driver.window_handles[0])
 driver.find_element_by_id('regEmail').send_keys(email)
+time.sleep(3)
 driver.find_element_by_xpath("//button[contains(text(),'Continue')]").click()
-time.sleep(10)
+time.sleep(7)
 driver.find_element_by_id('regUsername').send_keys(finalName)
 driver.find_element_by_id('regPassword').send_keys(password)
-input("continue")
+input("continue when you have finish the captcha")
 time.sleep(1)
 driver.find_element_by_xpath("//button[@class='AnimatedForm__submitButton SignupButton']").click()
-input("continue")
+time.sleep(7)
 driver.find_element_by_xpath("//button[@class='AnimatedForm__submitButton SubscribeButton']").click()
-time.sleep(5)
+time.sleep(7)
 driver.get("https://pooblic.org/place/auth")
 driver.find_element_by_xpath("//input[@class='fancybutton newbutton allow']").click()
 driver.switch_to.window(driver.window_handles[1])
+driver.execute_script("window.scrollTo(30,document.body.scrollHeight)")
+input("")
+time.sleep(5)
 driver.find_element_by_xpath("//a[contains(text(), 'Reddit')]").click()
 try:
     driver.find_element_by_xpath("//body").click()
 except:
     print("no ad to skip")
     pass
-driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
 input("")
 time.sleep(1)
 driver.find_element_by_class_name("btn-14").click()
