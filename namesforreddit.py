@@ -2,16 +2,26 @@ from os.path import dirname
 from numpy import intp
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver import ActionChains
 import random
 import time
-import re
 import string
 import secrets
 import os
+
+print("""
+  __  __              _____     _____ 
+ |  \/  |     /\     |  __ \   / ____|
+ | \  / |    /  \    | |__) | | (___  
+ | |\/| |   / /\ \   |  _  /   \___ \ 
+ | |  | |  / ____ \  | | \ \   ____) |
+ |_|  |_| /_/    \_\ |_|  \_\ |_____/ 
+                                      
+                                      
+""")
+
+options = webdriver.ChromeOptions()
 driver = webdriver.Chrome(ChromeDriverManager().install()) # USES CHROMEDRIVERMANAGER TO AUTO UPDATE CHROMEDRIVER
-chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+
 # GENERATE PASSWORD
 alphabet = string.ascii_letters + string.digits
 password = ''.join(secrets.choice(alphabet) for i in range(16))
@@ -62,10 +72,10 @@ time.sleep(7)
 driver.find_element_by_xpath("//button[@class='AnimatedForm__submitButton SubscribeButton']").click()
 time.sleep(7)
 driver.get("https://pooblic.org/place/auth")
+time.sleep(3)
 driver.find_element_by_xpath("//input[@class='fancybutton newbutton allow']").click()
 driver.switch_to.window(driver.window_handles[1])
 driver.execute_script("window.scrollTo(30,document.body.scrollHeight)")
-input("signed up for pooblic.org/place ! press enter to attempt an email signup!")
 time.sleep(5)
 driver.find_element_by_xpath("//a[contains(text(), 'Reddit')]").click()
 try:
