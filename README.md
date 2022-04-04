@@ -1,22 +1,51 @@
-# Reddit Account Generator
- **WHAT IS IT?**
- 
- This is a semi-automatic Reddit account generator. I'm saying "semi-automatic" because it still requires a Google Captcha to be completed at the end of the creation process.
- 
- **HOW DOES IT WORK?**
- 
- This script was made for quickly creating Reddit throwaways. _See my other project -- the Reddit Account Deleter, which is made to completly erase Reddit accounts (including comments and all)._
- It generates an username derived from a Wikipedia:Random article, and then appending some random digits to it as to have it be unique. Then, it completes the Reddit sign-up process, leaving you only to complete the Captcha at the end.
- 
- **REQUIRMENTS**
- 
- Only Selenium and webdriver-manager (pip install selenium && pip install webdriver-manager).
- A file named "namesforreddit.txt" should be in the same folder as the .py executable.
- 
- **UPDATES**
- 
-_23.7.2021_ - 
- Reviewed the almost year-old code and made some small changes. Now, it should be more stable, as it doesn't use XPaths anymore.
- Also, because I've added Webdriver-Manager there should be less (or none?) inconstencies between the driver versions, as it automatically updates the version of the webdriver with every launch.
- 
- Hopefully this is useful; feedback kindly appreciated :)
+# Reddit Account Generator and Verifyer
+
+Very cool. Made by mars
+
+<br>
+
+**Instalation**
+
+pip install selenium webdriver-manager
+
+<br>
+
+**Usage**
+
+1\. python namesforreddit.py
+
+2\. wait until the captcha pops up, solve it, then press enter
+
+3\. wait & done!
+
+Change ur ip each time to avoid the 10 minute cooldown
+
+<br>
+
+**How it works**
+
+Step 1. Gets a random wikipedia article name to use as the account's username (+ a bunch of random numbers)
+
+Step 2. Generates a safe and random password
+
+Step 3. Gets a 10 minute temp email
+
+Step 4. Enters the info on the reddit signup page
+
+Step 5. Human solves the captcha and tells the bot to continue
+
+Step 6. Bot finished sign up process
+
+Step 7. Bot signs up for pooblic place bot
+
+Step 8. Bot goes to the temp email inbox
+
+Step 9. Bot verifies the email
+
+Step 10. EZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+
+<br>
+
+**For Help**
+
+Open up an issue
