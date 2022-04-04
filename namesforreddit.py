@@ -11,7 +11,7 @@ import string
 import secrets
 import os
 driver = webdriver.Chrome(ChromeDriverManager().install()) # USES CHROMEDRIVERMANAGER TO AUTO UPDATE CHROMEDRIVER
-webdriver.Chrome(log_path='NUL')
+chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
 # GENERATE PASSWORD
 alphabet = string.ascii_letters + string.digits
 password = ''.join(secrets.choice(alphabet) for i in range(16))
