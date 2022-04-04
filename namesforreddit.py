@@ -65,7 +65,7 @@ driver.get("https://pooblic.org/place/auth")
 driver.find_element_by_xpath("//input[@class='fancybutton newbutton allow']").click()
 driver.switch_to.window(driver.window_handles[1])
 driver.execute_script("window.scrollTo(30,document.body.scrollHeight)")
-input("")
+input("signed up for pooblic.org/place ! press enter to attempt an email signup!")
 time.sleep(5)
 driver.find_element_by_xpath("//a[contains(text(), 'Reddit')]").click()
 try:
