@@ -11,7 +11,7 @@ import string
 import secrets
 import os
 driver = webdriver.Chrome(ChromeDriverManager().install()) # USES CHROMEDRIVERMANAGER TO AUTO UPDATE CHROMEDRIVER
-
+webdriver.Chrome(log_path='NUL')
 # GENERATE PASSWORD
 alphabet = string.ascii_letters + string.digits
 password = ''.join(secrets.choice(alphabet) for i in range(16))
@@ -45,7 +45,7 @@ finalName = name+str(randomNumber)
 driver.get('https://www.reddit.com/register/')
 driver.execute_script("window.open('about:blank', 'secondtab');")
 driver.switch_to.window("secondtab")
-driver.get("https://10minutemail.net")
+driver.get("https://10minutemail.org")
 email = driver.find_element_by_class_name("mailtext").get_attribute("value")
 print(email)
 driver.switch_to.window(driver.window_handles[0])
@@ -73,8 +73,7 @@ try:
 except:
     print("no ad to skip")
     pass
-input("")
-time.sleep(1)
+time.sleep(4)
 driver.find_element_by_class_name("btn-14").click()
-input("")
+input("FINISHED UP! Thank you for helping the cause! - ItCameFr0mMars")
 driver.close()
