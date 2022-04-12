@@ -34,15 +34,13 @@ Step 4. Enters the info on the reddit signup page
 
 Step 5. Human solves the captcha and tells the bot to continue
 
-Step 6. Bot finished sign up process
+Step 6. Bot finishes sign up process
 
-Step 7. Bot signs up for pooblic place bot
+Step 7. Bot goes to the temp email inbox
 
-Step 8. Bot goes to the temp email inbox
+Step 8. Bot verifies the email
 
-Step 9. Bot verifies the email
-
-Step 10. EZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+Step 9. EZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
 
 <br>
 
